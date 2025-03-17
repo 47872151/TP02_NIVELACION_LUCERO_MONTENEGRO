@@ -12,14 +12,14 @@ function maMeIg(event)
         if (numIngresado < random)
         {
             console.log(random);
-            mensaje = 'El número que dijiste es MENOR al número elegido';
+            mensaje = 'El número que dijiste es MENOR al número elegido.';
             contadorIntentos++;
         }
         else if (numIngresado == random)
         {
             console.log(random);
             adivino = true;
-            mensaje = `¡Acertaste! Felicitaciones. Intentaste ${contadorIntentos} veces`;
+            mensaje = `¡Acertaste! Felicitaciones. Intentaste ${contadorIntentos} veces.`;
             setTimeout(function() {
                 location.reload();
             }, 4000);
@@ -27,7 +27,7 @@ function maMeIg(event)
         else if (numIngresado > random)
         {
             console.log(random);
-            mensaje = 'El número que dijiste es MAYOR al número elegido';
+            mensaje = 'El número que dijiste es MAYOR al número elegido.';
             contadorIntentos++;
         }
     }
