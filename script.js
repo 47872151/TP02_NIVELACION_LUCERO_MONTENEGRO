@@ -6,10 +6,10 @@ function maMeIg(event)
     let numIngresado = document.getElementById("numIngresado").value;
     const mensajeContenedor = document.getElementById("mensajeResultado");
     let mensaje = " ";
-
-    if(numIngresado >= 1  && numIngresado <= 100)
+    let adivino = false;
+    if(numIngresado >= 1  && numIngresado <= 100 )
     {
-          if (numIngresado < random)
+        if (numIngresado < random)
         {
             console.log(random);
             mensaje = 'El número que dijiste es MENOR al número elegido';
@@ -18,7 +18,11 @@ function maMeIg(event)
         else if (numIngresado == random)
         {
             console.log(random);
+            adivino = true;
             mensaje = `¡Acertaste! Felicitaciones. Intentaste ${contadorIntentos} veces`;
+            setTimeout(function() {
+                location.reload();
+            }, 4000);
         }
         else if (numIngresado > random)
         {
@@ -27,11 +31,12 @@ function maMeIg(event)
             contadorIntentos++;
         }
     }
-    else{
-        alert('Por favor, ingrese un número dentro del rango permitido')
+    else
+    {
+       alert('Por favor, ingrese un número dentro del rango permitido')
     }
-      
-   
+
+    mensajeContenedor.innerHTML = `<p>${mensaje}</p>`;
     maMeIg.submit();
 }
 
