@@ -39,5 +39,3 @@ function maMeIg(event)
     mensajeContenedor.innerHTML = `<p>${mensaje}</p>`;
     maMeIg.submit();
 }
-
-
